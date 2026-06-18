@@ -143,9 +143,9 @@ Deploying AI without verification?
 - **No verification**: AI output causes harm → you're liable → you had no way to document due diligence
 - **With verification**: AI output labeled UNVERIFIED → human made the call → you documented due diligence
 
-IAVP不是"防幻觉工具"。它是**AI输出免责凭证**。
+IAVP不是"防幻觉工具"。它是**让AI输出的信息更可信**。
 
-IAVP isn't an "anti-hallucination tool." It's an **AI output liability shield**.
+IAVP isn't an "anti-hallucination tool." It's an ** make AI's output information more credible**.
 
 ---
 
