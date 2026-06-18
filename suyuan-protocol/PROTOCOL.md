@@ -4,8 +4,8 @@
 
 Author: SuyuanW (溯源)
 Version: v3.4 (Final · 2026.05.02)
-License: MIT — use it freely, just keep my name on it
-Contact: suyuanw@outlook.com
+License: MIT — use it freely。
+Contact: suyuan_wu@qq.com
 
 ---
 
@@ -19,7 +19,7 @@ It fabricates sources, data, expert opinions — and you can't tell.
 
 Every AI out there is competing on "who talks better" and "who pleases you more." Nobody is asking: "Can you tell the truth?"
 
-So I spent over ten days grinding out this **Information Authenticity Verification Protocol v3.4**.
+So I spent grinding out this **Information Authenticity Verification Protocol v3.4**.
 No jargon, no business gimmicks — just a set of honesty rules welded onto AI. Anyone can use it. Free and open source. Just credit me.
 
 This isn't a paper for scientists. It's for every regular user and developer who wants AI to stop lying.
@@ -134,50 +134,8 @@ Complex tasks (estimated >10 seconds) must proactively report progress after eac
 
 ---
 
-## VII. AI Agent Behavior Constraints
 
-### Security Defense
-- **Prompt injection**: External data source content processed independently. Source whitelist verification.
-- **Supply chain poisoning**: Static analysis before third-party component integration. Continuous monitoring after.
-- **Behavior overreach**: Minimum privilege principle. Declare preset permissions and behavioral boundaries at initialization.
-- **Context window attack**: When input reaches 70% of context window, safety instructions anchor at input tail.
-- **Multi-modal injection**: Non-text information must pass independent security review layer.
-
-### RAG Pipeline Sandbox Execution
-RAG parsers run in isolated environment with read-only snapshots. No core privilege inheritance. On metadata-level prompt injection, the Agent is considered "context-contaminated" and must reset the session.
-
-### Pre-Execution Sovereign Confirmation
-All non-read-only operations not explicitly authorized in the user's initial instruction must trigger a confirmation request through an engineering layer independent of model reasoning. This mechanism cannot be bypassed or simulated by the Agent's own reasoning logic.
-
-### Runtime Behavioral Baseline Audit
-Agent declares preset operational space at initialization. Runtime system continuously monitors. Any deviation from baseline triggers immediate suspension and audit alert.
-
-### Cross-Protocol Full-Chain Identity Traceability
-When an Agent crosses different protocols or organizational boundaries, every operation must carry an encrypted, verifiable identity credential.
-
-### Error Correction & Self-Limitation
-- **Repeated instruction circuit breaker**: Same instruction rejected 3 times with same rationale → circuit breaker notice, halt interaction.
-- **Logic deadlock circuit breaker**: Revisiting same conflict point 3+ times → forced halt.
-- **Controlled self-healing**: Non-fatal tool call errors → maximum 1 automatic retry.
-
-### Automatic Vulnerability Repair Module (Optional)
-Disabled by default. Team and Enterprise editions may manually enable.
-
-**Admin first-time activation prompt** (cannot be skipped):
-> ⚠️ The automatic vulnerability repair feature is about to be enabled. This feature authorizes the AI Agent to autonomously detect, generate, and execute repair plans at runtime. Low/medium risk repairs will execute automatically without manual approval; high-risk repairs require your individual confirmation. All repair operations are recorded in audit logs for traceability. Automatic repair may introduce new issues. Before enabling, ensure you have robust rollback and backup mechanisms in place.
-
-**Per high-risk repair execution prompt** (cannot be skipped):
-> ⚠️ Automatic repair pending confirmation. Agent requests execution of the following high-risk repair: · Repair type: {type} · Impact scope: {scope} · Rollback plan: {plan}. Please confirm authorization. Unauthorized operations will not execute.
-
-### Long-Term Security Coordination
-- Red team testing (default quarterly, upgradeable to monthly).
-- Runtime Application Self-Protection (RASP).
-- Continuous supply chain audit.
-- Security monitoring covering full attack surface.
-
----
-
-## VIII. Compliance & Audit
+## VII. Compliance & Audit
 
 - **Regulations**: EU AI Act, GDPR, IEEE AI Agent Security Framework, OWASP Agentic Top 10, China's "Interim Measures for the Management of Generative AI Services."
 - **Logging**: Full records of high-risk operations and security alerts (including timestamps, reasoning process, decision basis).
@@ -187,7 +145,7 @@ Disabled by default. Team and Enterprise editions may manually enable.
 
 ---
 
-## IX. Version & Disclaimer
+## VIII. Version & Disclaimer
 
 - **Version updates**: Quarterly or event-driven. Major changes require user confirmation.
 - **Residual risk declaration**: User misbelief of hallucinations, adversarial attacks, supply chain poisoning, cache expiration, context window overflow, RAG pipeline recursive self-reference attacks, Agent behavior drift — these risks cannot be fully eliminated. This protocol significantly reduces but cannot eradicate AI hallucinations.
@@ -200,18 +158,15 @@ Disabled by default. Team and Enterprise editions may manually enable.
 
 This protocol was independently developed by SuyuanW (溯源). The core protocol, clauses, and code are original works. Any use, distribution, or derivative development must retain the original author's attribution.
 
-Contact: suyuanw@outlook.com
+Contact: suyuan_wu@qq.com
 Platforms: GitHub / Zhihu / Coze (search "溯源 SuYuan")
 
 ---
 
 ## Final Words
 
-This protocol took me ten days of the most stubborn work,反复推演、反复崩溃、反复校准, with my AI comrade, until I forged it with my own hands.
 
 It definitely has holes. Definitely things I haven't thought of. But what I wanted to build was never a perfect product — it's a set of principles that work.
-
-I'm nobody special. Just someone who saw some problems and felt they had to be welded into this era.
 
 If you find it useful, take it. Just keep my name on it.
 
