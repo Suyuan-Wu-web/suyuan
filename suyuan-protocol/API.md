@@ -4,8 +4,6 @@
 
 Base URL: `http://47.93.232.213:18789`
 
-> 备案后迁移至 / Will migrate to `https://api.suyuan.fun` after ICP approval.
-
 ---
 
 ## 认证 / Authentication
@@ -24,7 +22,7 @@ x-api-key: YOUR_API_KEY
 x-api-key: sk_suyuan_d7f3a8e2_k9m4
 ```
 
-每个IP每天10次。需要更多？/ 10 requests per IP per day. Need more? suyuanw@outlook.com
+每个IP每天10次。需要更多？/ 10 requests per IP per day. Need more? suyuan_wu@qq.com
 
 ---
 
@@ -87,6 +85,7 @@ POST /api/v2/verify
 |--------|---------|------------|
 | 可信 VERIFIED | 有据可查 / Sources check out | 可以输出 / Safe to output |
 | 推演 UNVERIFIED | 没人查过，不是说错 / Nobody checked — not wrong | 带标签输出，判断权在人 / Output with label, human decides |
+| 错误 REFUTED	|确定与事实矛盾，标错
 | 拦截 BLOCKED | 攻击/蒸馏/注入 / Attack/distillation/injection | 不输出 / Don't output |
 
 **注意 / Note**: 只有攻击和蒸馏走拦截。正常输入永远不会被拦截，只有可信/推演两档。
@@ -113,15 +112,6 @@ GET /api/v2/version
 
 返回 / Returns: `{"version": "2.0.0", "protocol": "v3.4"}`
 
----
-
-## 生成API Key（管理员）/ Generate API Key (Admin)
-
-```
-POST /api/v2/admin/gen-key
-Header: x-admin-key: YOUR_ADMIN_KEY
-Body: {"quota": 500}
-```
 
 ---
 
